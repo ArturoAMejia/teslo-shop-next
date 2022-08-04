@@ -59,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     };
   }
 
-  let products = await dbProducts.getProductsByTem(query);
+  let products = await dbProducts.getProductsByTerm(query);
   const foundProducts = products.length > 0;
 
   if (!foundProducts) {

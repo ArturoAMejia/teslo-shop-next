@@ -118,7 +118,7 @@ const ProductPage: NextPage<Props> = ({ product }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
-  const productSlug = await dbProducts.getAllProductsSlugs();
+  const productSlug = await dbProducts.getAllProductSlugs();
 
   return {
     paths: productSlug.map(({ slug }) => ({
